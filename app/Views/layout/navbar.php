@@ -9,6 +9,7 @@
                 <a class="nav-link active" href="/">Home </a>
                 <a class="nav-link active" href="<?= base_url('pages/about'); ?>">About </a>
                 <a class="nav-link active" href="<?= base_url('pages/contact'); ?>">Contact </a>
+                <a class="nav-link active" href="<?= base_url('/komik'); ?>">Komik </a>
             </div>
         </div>
     </div>
