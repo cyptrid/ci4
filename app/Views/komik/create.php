@@ -6,12 +6,16 @@
     <div class="row">
         <div class="col">
             <h2>Form Tambah Data Komik</h2>
+            <?= $validation->listErrors(); ?>
             <form action="/komik/save" method="post">
                 <?= csrf_field(); ?>
                 <div class="form-group row">
                     <label for="judul" class="col-sm-2 col-form-label">Judul</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" name="judul" id="judul" autofocus>
+                        <input type="text" class="form-control <?= ($validation->hasError('judul')) ? 'is-invalid' : ''; ?>" name="judul" id="judul" autofocus value="<?= old('judul'); ?>">
+                        <div id="validationServer03Feedback" class="invalid-feedback">
+                            <?= $validation->getError('judul'); ?>
+                        </div>
                     </div>
                 </div>
                 <div class="form-group row">
