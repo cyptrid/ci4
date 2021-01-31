@@ -12,6 +12,11 @@
                 <a class="nav-link active" href="<?= base_url('/komik'); ?>">Komik </a>
                 <a class="nav-link active" href="<?= base_url('/orang'); ?>">Orang </a>
             </div>
+            <?php if (logged_in()) : ?>
+                <a class="nav-link active" href="<?= base_url('/logout'); ?>">Logout </a>
+            <?php else : ?>
+                <a class="nav-link active" href="<?= base_url('/login'); ?>">Login </a>
+            <?php endif; ?>
         </div>
     </div>
 </nav>
